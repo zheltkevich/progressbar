@@ -1,4 +1,6 @@
 * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", Arial, sans-serif;
@@ -159,4 +161,124 @@ body {
   stroke-dashoffset: -webkit-calc(440 - (440 * 50) / 100);
   stroke-dashoffset: calc(440 - (440 * 50) / 100);
   stroke: #e021c0;
+}
+
+.progressbar2 {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.progressbar2__container {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: 300px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border: 1px solid #7a7a7a;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.progressbar2__content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.progressbar2__number {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.progressbar2__number h2 {
+  color: #52ac3c9f;
+  font-size: 44px;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.progressbar2 svg {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.progressbar2 svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #317fb3;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.progressbar2 svg circle:nth-child(2) {
+  stroke-dasharray: 436;
+  stroke-dashoffset: 436;
+}
+
+.progressbar2 svg circle:nth-child(2) {
+  stroke-dashoffset: -webkit-calc(436 - (436 * 50) / 100);
+  stroke-dashoffset: calc(436 - (436 * 50) / 100);
+  stroke: #21e051;
 }
