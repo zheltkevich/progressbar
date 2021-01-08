@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: -webkit-linear-gradient(45deg, #2e3b4b, #317fb3);
+  background: -o-linear-gradient(45deg, #2e3b4b, #317fb3);
+  background: linear-gradient(45deg, #2e3b4b, #317fb3);
+}
+
+.main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.progressbar {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.progressbar__container {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
+  height: 330px;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  border: 2px solid white;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.progressbar__container:hover {
+  -webkit-box-shadow: 0 0 40px rgba(219, 195, 57, 0.5);
+          box-shadow: 0 0 40px rgba(219, 195, 57, 0.5);
+}
+
+.progressbar__container:hover .progressbar__number h2 {
+  color: #fff;
+}
+
+.progressbar__container:hover .progressbar__number h2 span {
+  color: #fff;
+}
+
+.progressbar__content {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.progressbar__number {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.progressbar__number h2 {
+  color: #777;
+  font-size: 44px;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.progressbar__number h2 span {
+  color: #777;
+  padding-left: 3px;
+  font-size: 24px;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.progressbar svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  -webkit-transform: rotate(-85deg);
+      -ms-transform: rotate(-85deg);
+          transform: rotate(-85deg);
+}
+
+.progressbar svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #317fb3;
+  stroke-width: 10;
+  stroke-linecap: round;
+  -webkit-transform: translate(5px, 5px);
+      -ms-transform: translate(5px, 5px);
+          transform: translate(5px, 5px);
+}
+
+.progressbar svg circle:nth-child(2) {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.progressbar svg circle:nth-child(2) {
+  stroke-dashoffset: -webkit-calc(440 - (440 * 50) / 100);
+  stroke-dashoffset: calc(440 - (440 * 50) / 100);
+  stroke: #e021c0;
+}

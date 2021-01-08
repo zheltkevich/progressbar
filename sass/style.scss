@@ -1,0 +1,123 @@
+$percent: 100;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #2e3b4b, #317fb3);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.progressbar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 330px;
+        border-radius: 20px;
+        border: 2px solid white;
+        background: transparent;
+        cursor: pointer;
+        text-align: center;
+        overflow: hidden;
+        transition: 0.5s ease;
+
+        &:hover {
+            box-shadow: 0 0 40px rgba(219, 195, 57, 0.5);
+
+            .progressbar__number {
+                h2 {
+                    color: #fff;
+
+                    span {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: transparent;
+        z-index: 1;
+    }
+
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+
+        h2 {
+            color: #777;
+            font-size: 44px;
+            transition: 0.5s ease;
+
+            span {
+                color: #777;
+                padding-left: 3px;
+                font-size: 24px;
+                transition: 0.5s ease;
+            }
+        }
+    }
+
+    svg {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        transform: rotate(-85deg);
+
+        circle {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: #317fb3;
+            stroke-width: 10;
+            stroke-linecap: round;
+            transform: translate(5px, 5px);
+
+            &:nth-child(2) {
+                stroke-dasharray: 440;
+                stroke-dashoffset: 440;
+            }
+        }
+    }
+}
+
+.progressbar {
+    svg {
+        circle {
+            &:nth-child(2) {
+                stroke-dashoffset: calc(440 - (440 * 50) / 100);
+                stroke: #e021c0;
+            }
+        }
+    }
+}
