@@ -1,5 +1,3 @@
-$percent: 100;
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -82,8 +80,6 @@ body {
             fill: none;
             stroke: #317fb3;
             stroke-width: 10;
-            stroke-linecap: round;
-            // transform: translate(5px, 5px);
 
             &:nth-child(2) {
                 stroke-dasharray: 440;
@@ -97,6 +93,8 @@ body {
     svg {
         circle {
             &:nth-child(2) {
+                //в IE11 не работает calc в нашем случае, поэтому в следующую строку
+                //необходимо подставлять заранее вычисленное значение
                 stroke-dashoffset: calc(440 - (440 * 50) / 100);
                 stroke: #21e051;
             }

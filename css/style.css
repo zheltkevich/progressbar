@@ -134,7 +134,6 @@ body {
   fill: none;
   stroke: #317fb3;
   stroke-width: 10;
-  stroke-linecap: round;
 }
 
 .progressbar svg circle:nth-child(2) {
